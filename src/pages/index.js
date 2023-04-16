@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import styles from '../styles/Index.module.css';
-import Link from 'next/link';
 import Image from 'next/image';
 import { avatar, comicavatar } from '../../public';
 import { AiOutlineTwitter } from 'react-icons/ai';

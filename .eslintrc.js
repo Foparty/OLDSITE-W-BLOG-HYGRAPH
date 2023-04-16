@@ -20,7 +20,7 @@ module.exports = {
 		quotes: ['error', 'single'],
 		semi: ['error', 'always'],
 		'no-undef': 'warn',
-		'react/prop-types': 'warn',
+		'react/prop-types': 'off',
 		'no-unused-vars': 'warn',
 	},
 };
