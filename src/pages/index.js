@@ -21,8 +21,14 @@ export default function Home() {
 						src={comicavatar}
 						layout='responsive'
 						className={styles.comicavatar}
+						alt={'emoji alfonso martin'}
 					/>
-					<Image src={avatar} layout='responsive' className={styles.avatar} />
+					<Image
+						src={avatar}
+						layout='responsive'
+						className={styles.avatar}
+						alt={'alfonso martin avatar'}
+					/>
 				</div>
 				<h2 className={styles.role}>Frontend Developer</h2>
 				<h1 className={styles.title}>Alfonso Martín</h1>
