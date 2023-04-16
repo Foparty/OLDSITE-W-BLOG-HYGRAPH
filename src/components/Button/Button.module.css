@@ -1,0 +1,17 @@
+.button {
+	margin: 1rem;
+	width: max-content;
+	margin-inline: auto;
+	padding: 0.4rem 2.1rem;
+	border-radius: 0.81rem;
+	border: none;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.button:hover {
+	cursor: pointer;
+}

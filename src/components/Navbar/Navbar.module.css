@@ -1,0 +1,16 @@
+.header {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.mainnav {
+	width: calc(100% - 4rem);
+	margin-inline: auto;
+	padding: 2rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav {
+	display: flex;
+	gap: 1rem;
+}

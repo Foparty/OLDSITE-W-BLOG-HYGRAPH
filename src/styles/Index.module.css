@@ -1,0 +1,75 @@
+.data {
+	height: inherit;
+	width: calc(100% - 2rem);
+	margin-inline: auto;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+}
+.role {
+	padding: 1rem 0;
+	font-family: var(--ff-headings);
+	color: transparent;
+
+	-webkit-text-stroke: 0.5px var(--fg);
+}
+
+.title {
+	font-family: var(--ff-headings);
+	font-weight: 600;
+}
+
+.imgcontainer {
+	--size: 10rem;
+	width: var(--size);
+	height: var(--size);
+	margin-inline: auto;
+	display: grid;
+	position: relative;
+}
+
+.comicavatar {
+	position: absolute;
+	background-color: #303030;
+	border-radius: 50%;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.avatar {
+	position: absolute;
+	background-color: #303030;
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.imgcontainer:hover .comicavatar {
+	opacity: 0;
+}
+.imgcontainer:hover .avatar {
+	opacity: 1;
+}
+
+.social {
+	margin: 1rem 0;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	align-items: center;
+}
+
+.socialgroup {
+	font-family: var(--ff-text);
+	text-transform: capitalize;
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+/* .sociallink {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+} */
