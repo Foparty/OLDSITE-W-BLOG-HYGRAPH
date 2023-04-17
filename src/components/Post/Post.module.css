@@ -1,19 +1,16 @@
 .data {
-	margin-top: 2rem;
+	padding: 2rem 0 6rem 0;
 	height: inherit;
 	width: calc(100% - 2rem);
 	margin-inline: auto;
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	/* justify-content: center; */
 	text-align: center;
-	font-family: var(--ff-headings);
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
-/* .title {
-	margin-bottom: 2rem;
-} */
+.title {
+	font-family: var(--ff-headings);
+}
 
 .divide {
 	height: 1px;
@@ -29,9 +26,7 @@
 		rgba(47, 133, 243, 1) 70%
 	);
 }
-
-.posts {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 2rem;
+.date {
+	font-family: var(--ff-mono);
+	font-size: 0.7rem;
 }
