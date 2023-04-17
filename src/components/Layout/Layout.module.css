@@ -1,5 +1,6 @@
 .main {
 	display: grid;
+	height: 100vh;
 	height: 100dvh;
 	width: 100%;
 	/*width: min(100% - 1rem, 45rem);*/
