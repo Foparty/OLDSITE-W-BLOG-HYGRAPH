@@ -1,0 +1,11 @@
+.data {
+	height: inherit;
+	width: calc(100% - 2rem);
+	margin-inline: auto;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	font-family: var(--ff-headings);
+}

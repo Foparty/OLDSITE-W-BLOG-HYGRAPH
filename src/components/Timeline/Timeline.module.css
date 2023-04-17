@@ -1,0 +1,72 @@
+/* 
+
+background: rgb(248,219,29);
+background: linear-gradient(90deg, rgba(248,219,29,1) 0%, rgba(250,166,83,1) 15%, rgba(251,132,121,1) 30%, rgba(252,106,157,1) 45%, rgba(213,98,192,1) 60%, rgba(47,133,243,1) 70%);
+
+*/
+
+.timelinecontainer {
+	width: 100%;
+	margin-inline: atuo;
+
+	/* max-height: 10rem; */
+}
+
+.timelineevents {
+	width: 100%;
+	display: flex;
+}
+
+.event {
+	text-align: left;
+	margin: 0.3rem 0;
+	padding: 0 0.4rem;
+	height: 3rem;
+	border-left: 1px solid #888;
+	font-family: var(--ff-text);
+	font-size: 0.7rem;
+	flex: 1 0;
+	display: flex;
+	align-items: end;
+}
+
+.timelineemoji {
+	max-height: 3rem;
+	width: auto;
+	margin-inline: auto;
+}
+
+.timelineticks {
+	height: 0.4rem;
+	margin: 0.2rem 0;
+	background-image: url('/public/bg_imeline.png');
+	background-repeat: repeat-x;
+}
+
+.timeline {
+	width: 100%;
+	box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.7);
+	height: 0.6rem;
+	border-radius: 0.7rem;
+	background: rgb(248, 219, 29);
+	background: linear-gradient(
+		90deg,
+		rgba(248, 219, 29, 1) 0%,
+		rgba(250, 166, 83, 1) 15%,
+		rgba(251, 132, 121, 1) 30%,
+		rgba(252, 106, 157, 1) 45%,
+		rgba(213, 98, 192, 1) 60%,
+		rgba(47, 133, 243, 1) 70%
+	);
+}
+
+.subtext {
+	margin-top: 0.3rem;
+	font-family: var(--ff-headings);
+	font-size: 0.7rem;
+	width: calc(100% - 1rem);
+	margin-inline: auto;
+
+	display: flex;
+	justify-content: space-between;
+}

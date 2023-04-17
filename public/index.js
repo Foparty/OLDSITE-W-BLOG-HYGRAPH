@@ -1,3 +1,10 @@
 export { default as comicavatar } from './comicavatar.png';
 export { default as avatar } from './avatar.jpg';
+export { default as avatar2 } from './avatar2.webp';
+export { default as avatar3 } from './avatar3.webp';
+export { default as avatar4 } from './avatar4.webp';
+export { default as avatar5 } from './avatar5.webp';
+export { default as avatar6 } from './avatar6.webp';
 export { default as logo } from './logo.webp';
+export { default as timeline } from './timeline.webp';
+export { default as eyes } from './eyes.webp';
