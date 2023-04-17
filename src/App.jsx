@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Blog from './components/Blog/Blog';
 import Post from './components/Post/Post';
 import { request } from 'graphql-request';
+import NoMatch from './components/NoMatch/NoMatch';
 
 function App() {
 	const [posts, setPosts] = useState([]);
@@ -51,6 +52,7 @@ function App() {
 				<Route path={'/about'} element={<About />} />
 				<Route path={'/blog'} element={<Blog posts={posts} />} />
 				<Route path={'/post/:slug'} element={<Post posts={posts} />} />
+				<Route path='*' element={<NoMatch />} />
 			</Routes>
 		</>
 	);
