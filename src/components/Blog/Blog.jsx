@@ -20,9 +20,6 @@ const Blog = () => {
 						postImages {
 							url
 						}
-						featuredImage {
-							url
-						}
 						categories {
 							id
 							name
@@ -32,6 +29,9 @@ const Blog = () => {
 							raw
 						}
 						createdAt
+						image {
+							url
+						}
 					}
 				}
 				`,
@@ -48,14 +48,14 @@ const Blog = () => {
 			<h1 className={styles.title}>Welcome to my blog</h1>
 			<div className={styles.divide}></div>
 			<div className={styles.posts}>
-				{posts.map(({ id, title, slug, featuredImage, createdAt }) => {
+				{posts.map(({ id, title, slug, image, createdAt }) => {
 					return (
 						<Link to={`/post/${slug}`} key={id}>
 							<PostCard
 								title={title}
 								slug={slug}
 								id={id}
-								image={featuredImage.url}
+								image={image.url}
 								date={createdAt}
 							/>
 						</Link>

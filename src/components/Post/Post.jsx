@@ -21,7 +21,7 @@ const Post = () => {
 						postImages {
 							url
 						}
-						featuredImage {
+						image {
 							url
 						}
 						categories {
@@ -43,15 +43,25 @@ const Post = () => {
 		fetchPosts();
 	}, [slug]);
 
+	// const image = post.featuredImage.url;
+	console.log(post);
+
 	return (
-		<section className={styles.data}>
+		<article className={styles.data}>
+			{/* <img className={styles.featured} src={post.image.url} alt={post.title} /> */}
 			<h1 className={styles.title}>{post.title}</h1>
 			<small className={styles.date}>
 				{moment(post.createdAt).format('DD MMM, YYYY')}
 			</small>
 			<div className={styles.divide}></div>
+			<div>
+				{/* {post.postImages.map((item, index) => {
+					return <img key={index} src={item.url} alt={index} />;
+				})} */}
+			</div>
+
 			{/* <div>{title}</div> */}
-		</section>
+		</article>
 	);
 };
 
