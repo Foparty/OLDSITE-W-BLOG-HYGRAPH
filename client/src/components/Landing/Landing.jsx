@@ -27,8 +27,16 @@ const Landing = () => {
 	return (
 		<section className={styles.data}>
 			<div className={styles.imgcontainer}>
-				<img src={comicavatar} className={styles.comicavatar} alt={'emoji alfonso martin'} />
-				<img src={avatar} className={styles.avatar} alt={'alfonso martin avatar'} />
+				<img
+					src={comicavatar}
+					className={styles.comicavatar}
+					alt={'emoji alfonso martin'}
+				/>
+				<img
+					src={avatar}
+					className={styles.avatar}
+					alt={'alfonso martin avatar'}
+				/>
 			</div>
 			<h2 className={styles.role}>Frontend Developer</h2>
 			<h1 className={styles.title}>
@@ -39,7 +47,12 @@ const Landing = () => {
 					return (
 						<div className={styles.socialgroup} key={item.text}>
 							<item.logo />
-							<a href={item.url} target='_blank' rel='noreferrer' className={styles.sociallink}>
+							<a
+								href={item.url}
+								target='_blank'
+								rel='noreferrer'
+								className={styles.sociallink}
+							>
 								{item.text}
 							</a>
 						</div>

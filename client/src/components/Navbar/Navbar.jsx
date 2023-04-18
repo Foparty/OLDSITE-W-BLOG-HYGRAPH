@@ -13,6 +13,8 @@ const Navbar = () => {
 		{ name: 'home', url: '/' },
 		{ name: 'about', url: '/about' },
 		{ name: 'blog', url: '/blog' },
+		{ name: 'login', url: '/login' },
+		{ name: 'register', url: '/register' },
 	];
 	return (
 		<header className={styles.header}>

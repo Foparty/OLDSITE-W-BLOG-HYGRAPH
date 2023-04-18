@@ -6,6 +6,8 @@ import About from './components/About/About';
 import Blog from './components/Blog/Blog';
 import Post from './components/Post/Post';
 import NoMatch from './components/NoMatch/NoMatch';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 
 // const Landing = lazy(() => import('./components/Landing/Landing'));
 // const About = lazy(() => import('./components/About/About'));
@@ -21,6 +23,8 @@ function App() {
 				<Route path={'/'} element={<Landing />} />
 				<Route path={'/about'} element={<About />} />
 				<Route path={'/blog'} element={<Blog />} />
+				<Route path={'/login'} element={<Login />} />
+				<Route path={'/register'} element={<Register />} />
 				<Route path={'/post/:slug'} element={<Post />} />
 				<Route path='*' element={<NoMatch />} />
 			</Routes>
