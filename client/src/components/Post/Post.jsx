@@ -43,12 +43,15 @@ const Post = () => {
 		fetchPosts();
 	}, [slug]);
 
-	// const image = post.featuredImage.url;
 	console.log(post);
 
 	return (
 		<article className={styles.data}>
-			{/* <img className={styles.featured} src={post.image.url} alt={post.title} /> */}
+			<img
+				className={styles.featured}
+				src={`${post.image.url}`}
+				alt={post.title}
+			/>
 			<h1 className={styles.title}>{post.title}</h1>
 			<small className={styles.date}>
 				{moment(post.createdAt).format('DD MMM, YYYY')}

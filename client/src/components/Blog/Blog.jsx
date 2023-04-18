@@ -48,7 +48,7 @@ const Blog = () => {
 			<h1 className={styles.title}>Welcome to my blog</h1>
 			<div className={styles.divide}></div>
 			<div className={styles.posts}>
-				{/* {posts.map(({ id, title, slug, image, createdAt }) => {
+				{posts.map(({ id, title, slug, image, createdAt }) => {
 					return (
 						<Link to={`/post/${slug}`} key={id}>
 							<PostCard
@@ -60,7 +60,7 @@ const Blog = () => {
 							/>
 						</Link>
 					);
-				})} */}
+				})}
 			</div>
 			<h2>working on it ⚠️</h2>
 		</section>
