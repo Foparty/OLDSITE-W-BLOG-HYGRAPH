@@ -41,7 +41,7 @@ const Navbar = () => {
 	];
 	const loginbuttons = [
 		{ name: 'login', url: '/login' },
-		{ name: 'register', url: '/register' },
+		// { name: 'register', url: '/register' },
 	];
 	return (
 		<header className={styles.header}>
@@ -84,6 +84,8 @@ const Navbar = () => {
 								</li>
 							</>
 						)}
+					</ul>
+					<ul className={styles.loginbuttons}>
 						{!username &&
 							loginbuttons.map((menu) => {
 								return (
