@@ -1,18 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 import { logo } from '/public/';
 import { GiHamburgerMenu } from 'react-icons/gi';
+// import { UserContext } from '../../Context/UserContext.jsx';
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
+	const [userInfo, setUserInfo] = useState('');
+	// const { setUserInfo, userInfo } = useContext(UserContext);
+
+	useEffect(() => {
+		fetch('http://localhost:4000/profile', {
+			credentials: 'include',
+		}).then((response) => {
+			response.json().then((userInfo) => {
+				setUserInfo(userInfo);
+			});
+		});
+	}, []);
 	function handleMenuClick() {
 		setToggle(false);
 	}
+	function logout() {
+		fetch('http://localhost:4000/logout', {
+			credentials: 'include',
+			method: 'POST',
+		});
+		setUserInfo(null);
+		handleMenuClick();
+	}
+	const username = userInfo?.username;
+
 	const menus = [
 		{ name: 'home', url: '/' },
 		{ name: 'about', url: '/about' },
 		{ name: 'blog', url: '/blog' },
+	];
+	const loginbuttons = [
 		{ name: 'login', url: '/login' },
 		{ name: 'register', url: '/register' },
 	];
@@ -43,6 +68,30 @@ const Navbar = () => {
 								</li>
 							);
 						})}
+						{username && (
+							<>
+								<li>
+									<Link to={'create'} onClick={handleMenuClick}>
+										Create new post
+									</Link>
+								</li>
+								<li>
+									<Link to={'create'} onClick={logout}>
+										Logout
+									</Link>
+								</li>
+							</>
+						)}
+						{!username &&
+							loginbuttons.map((menu) => {
+								return (
+									<li key={menu.name}>
+										<Link to={menu.url} onClick={handleMenuClick}>
+											{menu.name}
+										</Link>
+									</li>
+								);
+							})}
 					</ul>
 				</div>
 			</nav>

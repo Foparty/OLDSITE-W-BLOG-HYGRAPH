@@ -8,6 +8,7 @@ import Post from './components/Post/Post';
 import NoMatch from './components/NoMatch/NoMatch';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import { UserContextProvider } from './Context/UserContext.jsx';
 
 // const Landing = lazy(() => import('./components/Landing/Landing'));
 // const About = lazy(() => import('./components/About/About'));
@@ -19,15 +20,17 @@ function App() {
 	return (
 		<>
 			{/* <Suspense fallback={<div className='loadingcontainer'>Loading...</div>}> */}
-			<Routes>
-				<Route path={'/'} element={<Landing />} />
-				<Route path={'/about'} element={<About />} />
-				<Route path={'/blog'} element={<Blog />} />
-				<Route path={'/login'} element={<Login />} />
-				<Route path={'/register'} element={<Register />} />
-				<Route path={'/post/:slug'} element={<Post />} />
-				<Route path='*' element={<NoMatch />} />
-			</Routes>
+			<UserContextProvider>
+				<Routes>
+					<Route path={'/'} element={<Landing />} />
+					<Route path={'/about'} element={<About />} />
+					<Route path={'/blog'} element={<Blog />} />
+					<Route path={'/login'} element={<Login />} />
+					<Route path={'/register'} element={<Register />} />
+					<Route path={'/post/:slug'} element={<Post />} />
+					<Route path='*' element={<NoMatch />} />
+				</Routes>
+			</UserContextProvider>
 			{/* </Suspense> */}
 		</>
 	);

@@ -17,6 +17,8 @@ const Register = () => {
 		} else {
 			alert('registration failed');
 		}
+		setUsername('');
+		setPassword('');
 	}
 	// const userRef = useRef();
 	// const passRef = useRef();
