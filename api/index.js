@@ -76,9 +76,10 @@ app.post('/post', uploadMiddleware.single('file'), async (req, res) => {
 	const { token } = req.cookies;
 	jwt.verify(token, secret, {}, async (err, info) => {
 		if (err) throw err;
-		const { title, summary, content } = req.body;
+		const { title, summary, content, slug } = req.body;
 		const postDoc = await Post.create({
 			title,
+			slug,
 			summary,
 			content,
 			cover: newPath,
@@ -97,9 +98,9 @@ app.get('/post', async (req, res) => {
 	);
 });
 
-app.get('/post/:id', async (req, res) => {
-	const { id } = req.params;
-	const postDoc = await Post.findById(id).populate('author', ['username']);
+app.get('/post/:slug', async (req, res) => {
+	const { slug } = req.params;
+	const postDoc = await Post.findOne({ slug }).populate('author', ['username']);
 	res.json(postDoc);
 });
 

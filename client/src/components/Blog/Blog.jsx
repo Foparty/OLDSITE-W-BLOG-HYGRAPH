@@ -21,13 +21,14 @@ const Blog = () => {
 			<h1 className={styles.title}>Welcome to my blog</h1>
 			<div className={styles.divide}></div>
 			<div className={styles.posts}>
-				{posts.map(({ _id, title, summary, cover, createdAt }) => {
+				{posts.map(({ _id, title, summary, cover, createdAt, slug }) => {
 					return (
-						<Link to={`/post/${_id}`} key={_id}>
+						<Link to={`/post/${slug}`} key={_id}>
 							<PostCard
 								id={_id}
 								title={title}
-								slug={summary}
+								slug={slug}
+								summary={summary}
 								cover={cover}
 								date={createdAt}
 							/>

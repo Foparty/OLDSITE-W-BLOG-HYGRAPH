@@ -5,17 +5,17 @@ import moment from 'moment';
 // import request from 'graphql-request';
 
 const Post = () => {
-	const { id } = useParams();
+	const { slug } = useParams();
 	const [postInfo, setPostInfo] = useState(null);
 
 	useEffect(() => {
-		fetch(`http://localhost:4000/post/${id}`).then((response) => {
+		fetch(`http://localhost:4000/post/${slug}`).then((response) => {
 			response.json().then((postInfo) => {
 				setPostInfo(postInfo);
 			});
 		});
 	}, []);
-
+	console.log(postInfo);
 	if (!postInfo) return '';
 
 	return (

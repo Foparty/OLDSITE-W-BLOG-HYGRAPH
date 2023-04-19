@@ -28,7 +28,7 @@ function App() {
 					<Route path={'/blog'} element={<Blog />} />
 					<Route path={'/login'} element={<Login />} />
 					<Route path={'/register'} element={<Register />} />
-					<Route path={'/post/:id'} element={<Post />} />
+					<Route path={'/post/:slug'} element={<Post />} />
 					<Route path={'/create'} element={<CreatePost />} />
 					<Route path='*' element={<NoMatch />} />
 				</Routes>

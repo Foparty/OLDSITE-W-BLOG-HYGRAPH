@@ -6,6 +6,7 @@ import { Navigate } from 'react-router-dom';
 
 const CreatePost = () => {
 	const [title, setTitle] = useState('');
+	const [slug, setSlug] = useState('');
 	const [summary, setSummary] = useState('');
 	const [content, setContent] = useState('');
 	const [files, setFiles] = useState(null);
@@ -42,6 +43,7 @@ const CreatePost = () => {
 	async function createNewPost(ev) {
 		const data = new FormData();
 		data.set('title', title);
+		data.set('slug', slug);
 		data.set('summary', summary);
 		data.set('content', content);
 		data.set('file', files[0]);
@@ -75,7 +77,18 @@ const CreatePost = () => {
 					value={title}
 					onChange={(ev) => setTitle(ev.target.value)}
 				/>
-				<label className={styles.label} htmlFor='title'>
+				<label className={styles.label} htmlFor='slug'>
+					slug
+				</label>
+				<input
+					className={styles.input}
+					id={'slug'}
+					type='text'
+					placeholder={'slug'}
+					value={slug}
+					onChange={(ev) => setSlug(ev.target.value)}
+				/>
+				<label className={styles.label} htmlFor='summary'>
 					summary
 				</label>
 				<input
