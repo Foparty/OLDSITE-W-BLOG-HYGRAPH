@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
+// if i put context back dont forget to add it up here!
 import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 import { logo } from '/public/';
@@ -7,30 +8,31 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
-	const [userInfo, setUserInfo] = useState('');
-	// const { setUserInfo, userInfo } = useContext(UserContext);
+	const [username, setUsername] = useState(null);
 
 	useEffect(() => {
 		fetch('http://localhost:4000/profile', {
 			credentials: 'include',
 		}).then((response) => {
 			response.json().then((userInfo) => {
-				setUserInfo(userInfo);
+				setUsername(userInfo.username);
 			});
 		});
 	}, []);
 	function handleMenuClick() {
 		setToggle(false);
 	}
+
 	function logout() {
 		fetch('http://localhost:4000/logout', {
 			credentials: 'include',
 			method: 'POST',
 		});
-		setUserInfo(null);
+		setUsername(null);
 		handleMenuClick();
 	}
-	const username = userInfo?.username;
+
+	// const username = userInfo?.username;
 
 	const menus = [
 		{ name: 'home', url: '/' },

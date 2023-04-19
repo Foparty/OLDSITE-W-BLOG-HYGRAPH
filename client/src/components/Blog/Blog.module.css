@@ -9,6 +9,9 @@
 	/* justify-content: center; */
 	text-align: center;
 	font-family: var(--ff-headings);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding:0 0 6rem 0;
 }
 
 /* .title {
