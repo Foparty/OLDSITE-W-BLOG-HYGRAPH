@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
 mongoose.connect(
-	'mongodb+srv://foparty:Alons123.@cluster0.b4uvykh.mongodb.net/?retryWrites=true&w=majority',
+	'mongodb+srv://foparty:.@cluster0.b4uvykh.mongodb.net/?retryWrites=true&w=majority',
 );
 
 // USER REGISTRATION
